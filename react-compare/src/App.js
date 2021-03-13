@@ -13,6 +13,7 @@ function App() {
       <HashRouter>
         <Switch>
           <Route exact path={`${process.env.PUBLIC_URL}/`} component={Home}><Home /></Route>
+          // Added process.env.PUBLIC_URL to Route for Deployment
           <Route path={`${process.env.PUBLIC_URL}/faq`} component={Faq}><Faq /></Route>
         </Switch>
       </HashRouter>
