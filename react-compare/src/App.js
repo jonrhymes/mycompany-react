@@ -12,8 +12,8 @@ function App() {
       <Header></Header>
       <HashRouter>
         <Switch>
-          <Route exact path="/"><Home /></Route>
-          <Route path="/faq"><Faq /></Route>
+          <Route exact path="/" component={Home}><Home /></Route>
+          <Route path="/faq" component={Faq}><Faq /></Route>
         </Switch>
       </HashRouter>
       <Footer></Footer>
