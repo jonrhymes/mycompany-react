@@ -12,8 +12,8 @@ function App() {
       <Header></Header>
       <HashRouter>
         <Switch>
-          <Route exact path="/" component={Home}><Home /></Route>
-          <Route path="/faq" component={Faq}><Faq /></Route>
+          <Route exact path={`${process.env.PUBLIC_URL}/`} component={Home}><Home /></Route>
+          <Route path={`${process.env.PUBLIC_URL}/faq`} component={Faq}><Faq /></Route>
         </Switch>
       </HashRouter>
       <Footer></Footer>
