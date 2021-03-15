@@ -11,18 +11,13 @@ function App() {
   return (
     <div className="App">
       <Header></Header>
-      {/* <HashRouter basename="/"> */}
         <Switch>
-          <Route exact path={process.env.PUBLIC_URL + '/'}><Home /></Route>
-          {/* <Route exact path={`%PUBLIC_URL%/`} component={Home}><Home /></Route> */}
-          // Added process.env.PUBLIC_URL to Route for Deployment
-          <Route path={process.env.PUBLIC_URL + '/faq'} component={Faq}>
-          <Faq />
-        </Route>
+          <Route path="%PUBLIC_URL%/" component={Home}></Route>
+          <Route path="%PUBLIC_URL%/faq" component={Faq}></Route>
         </Switch>
-      {/* </HashRouter> */}
       <Footer></Footer>
     </div>
+
   );
 }
 
