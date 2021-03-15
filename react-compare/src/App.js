@@ -11,12 +11,12 @@ function App() {
   return (
     <div className="App">
       <Header></Header>
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
+        {/* <BrowserRouter basename={process.env.PUBLIC_URL}> */}
           <Switch>
             <Route exact path={`${process.env.PUBLIC_URL}/`} component={Home}></Route>
             <Route path={`${process.env.PUBLIC_URL}/faq`} component={Faq}></Route>
           </Switch>
-        </BrowserRouter>
+        {/* </BrowserRouter> */}
       <Footer></Footer>
     </div>
 
