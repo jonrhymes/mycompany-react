@@ -4,17 +4,19 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Home from './components/Home/Home';
 import Faq from './components/Faq/Faq';
-import { Route, Switch, HashRouter } from 'react-router-dom';
+import { Route, Switch, BrowserRouter } from 'react-router-dom';
 
 function App() {
 
   return (
     <div className="App">
       <Header></Header>
-        <Switch>
-          <Route path="%PUBLIC_URL%/" component={Home}></Route>
-          <Route path="%PUBLIC_URL%/faq" component={Faq}></Route>
-        </Switch>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
+          <Switch>
+            <Route exact path={`${process.env.PUBLIC_URL}/`} component={Home}></Route>
+            <Route path={`${process.env.PUBLIC_URL}/faq`} component={Faq}></Route>
+          </Switch>
+        </BrowserRouter>
       <Footer></Footer>
     </div>
 
