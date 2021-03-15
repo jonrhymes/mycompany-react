@@ -7,16 +7,20 @@ import Faq from './components/Faq/Faq';
 import { Route, Switch, HashRouter } from 'react-router-dom';
 
 function App() {
+
   return (
     <div className="App">
       <Header></Header>
-      <HashRouter>
+      {/* <HashRouter basename="/"> */}
         <Switch>
-          <Route exact path={`${process.env.PUBLIC_URL}/`} component={Home}><Home /></Route>
+          <Route exact path={process.env.PUBLIC_URL + '/'}><Home /></Route>
+          {/* <Route exact path={`%PUBLIC_URL%/`} component={Home}><Home /></Route> */}
           // Added process.env.PUBLIC_URL to Route for Deployment
-          <Route path={`${process.env.PUBLIC_URL}/faq`} component={Faq}><Faq /></Route>
+          <Route path={process.env.PUBLIC_URL + '/faq'} component={Faq}>
+          <Faq />
+        </Route>
         </Switch>
-      </HashRouter>
+      {/* </HashRouter> */}
       <Footer></Footer>
     </div>
   );
