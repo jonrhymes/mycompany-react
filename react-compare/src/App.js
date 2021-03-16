@@ -4,7 +4,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Home from './components/Home/Home';
 import Faq from './components/Faq/Faq';
-import { Route, Switch, BrowserRouter } from 'react-router-dom';
+import { Route, Switch, BrowserRouter, HashRouter } from 'react-router-dom';
 
 function App() {
 
@@ -13,13 +13,12 @@ function App() {
       <Header></Header>
         <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Switch>
-            <Route path='/' component={Home}></Route>
-            <Route path='/faq' component={Faq}></Route>
+            <Route exact path='/' component={Home}></Route>
+            <Route exact path='/faq' component={Faq}></Route>
           </Switch>
         </BrowserRouter>
       <Footer></Footer>
-    </div>
-
+      </div>
   );
 }
 
