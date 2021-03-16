@@ -33,7 +33,6 @@ class Header extends Component {
                     </div>
 
                     <div id="navbarBasicExample" className={"navbar-menu navbar-end "+menuActive}>
-                        {/* <div className="navbar-end"> */}
                             <Router basename={process.env.PUBLIC_URL} forceRefresh={true}>
                                 <Link to="/" className="navbar-item">Home</Link>
                                 <Link to="/faq" className="navbar-item">Features</Link>
@@ -51,7 +50,6 @@ class Header extends Component {
                                     </button>
                                 </div>
                             </div>
-                        {/* </div> */}
                     </div>
                 </nav>
             </>

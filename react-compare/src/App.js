@@ -13,8 +13,8 @@ function App() {
       <Header></Header>
         <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Switch>
-            <Route exact path='/' component={Home}></Route>
-            <Route exact path='/faq' component={Faq}></Route>
+            <Route path='/' component={Home}></Route>
+            <Route path='/faq' component={Faq}></Route>
           </Switch>
         </BrowserRouter>
       <Footer></Footer>
