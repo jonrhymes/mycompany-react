@@ -15,4 +15,4 @@ Technologies include:
     * React
     * Vue
 
-### :calling: Check out the mobile navbar toggle by shrinking the window.
+#### :calling: Check out the mobile navbar toggle by shrinking the window.
